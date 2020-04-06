@@ -2,5 +2,8 @@
   command = "npm run build"
   publish = "dist"
 
+[context.production]
+  environment = { ACCESS_TOKEN = "super secret" }
+
 [context.deploy-preview]
   command = "env && npm run build-preview"
